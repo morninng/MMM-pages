@@ -17,6 +17,16 @@ Module.register('MMM-pages', {
     rotationDelay: 10000
   },
 
+  goto_home_if_blankpage: function(){
+    console.log()
+    if(this.curPage === 0){
+      this.curPage = 1;
+      this.updatePages();
+      console.log('goto_home_if_blankpage move home ');
+    }else {
+      console.log('goto_home_if_blankpage do nothing because current page is not blank page ')
+    }
+  },
   /**
    * Apply any styles, if we have any.
    */
